@@ -25,4 +25,4 @@ puts "5 skills created"
     thumb_image: "https://via.placeholder.com/350x200"
 )
     end
-puts "9 portfo;io created"
+puts "9 portfolio created"
