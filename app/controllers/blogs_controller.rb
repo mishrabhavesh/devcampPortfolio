@@ -22,6 +22,18 @@ class BlogsController < ApplicationController
   def edit
   end
 
+  #TOGGLE STATUS
+  def toggle_status
+    @blog = Blog.friendly.find(params[:id])
+    if @blog.draft?
+      @blog.published!
+    elsif @blog.published?
+    @blog.draft!
+    end
+    redirect_to blogs_path, notice: 'post status changed'
+  end
+
+
   # POST /blogs
   # POST /blogs.json
   def create
